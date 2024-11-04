@@ -2,12 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "my-app/next.config.mjs",
+      "use": "@vercel/next"
     },
     {
-      "src": "my-app/package.json",
-      "use": "@vercel/next"
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -19,5 +19,8 @@
       "src": "/(.*)",
       "dest": "my-app/$1"
     }
-  ]
+  ],
+  "env": {
+    "MONGODB_CONN_STRING": "@mongodb_conn_string" // Use Vercel's Environment Variables feature for your connection string
+  }
 }
