@@ -1,11 +1,10 @@
 {
-  "name": "assignmnet-3",
+  "name": "assignment-3",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm --prefix my-app run build",
-    "vercel-build": "npm --prefix my-app run build"
+    "vercel-build": "cd my-app && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
